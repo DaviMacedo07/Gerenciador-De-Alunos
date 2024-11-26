@@ -1,7 +1,8 @@
-*{margin: 0; padding : 0; box-sizing: border-box;}
+*{margin: 0; padding : 0; box-sizing: border-box; font-family: "Roboto";}
 
-nav{height: 90px;}
-a{cursor: pointer; font-weight: bold;}
+nav{height: 90px; text-transform: uppercase}
+a{cursor: pointer; font-weight: bold; }
+a.btn-nav:hover{background-color: #94C2B8; color: white;}
 .neo-section{
     min-height: 800px;
     background-size: cover !important;
@@ -26,3 +27,11 @@ a{cursor: pointer; font-weight: bold;}
 .botoes{padding: 2% 15%;}
 .btn:hover{background-color: rgba(0,0,0,0.2);}
 .rodape{color: black; background-color:#9FB9C2; text-align: center; font-size: 1.15em; padding:13px;}
+
+/* RESPONSIVIDADE */
+
+@media screen and ( max-width: 667px) {
+    .wm{width: 100%;}
+    nav{height:100%}
+    .neo-container{margin-top: 120px}
+}
