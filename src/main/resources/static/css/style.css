@@ -21,4 +21,8 @@ a{cursor: pointer; font-weight: bold;}
     position: relative;
     z-index: 105;
 }
-.texto-centro{font-size: 3em; font-family:'Ubuntu'}
+.texto-centro{font-size: 2.6em; font-family:'Roboto'; font-weight: bold;}
+.btn{width:280px; color: #fff; border-radius: 10px; border: 3px solid #14BF96; padding:12px;font-weight: bold;}
+.botoes{padding: 2% 15%;}
+.btn:hover{background-color: rgba(0,0,0,0.2);}
+.rodape{color: black; background-color:#9FB9C2; text-align: center; font-size: 1.15em; padding:13px;}
