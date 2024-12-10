@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Projeto Academy</title>
+    <meta name="author" content="Davi Macedo">
+    <style>
+        .table td a {
+    margin-right: 5px; /* Ajuste o espaçamento entre os botões */
+    padding: 4px 8px; /* Ajuste o tamanho interno dos botões */
+    font-size: 0.8rem; /* Ajuste o tamanho da fonte dos botões */
+}
+    </style>
+</head>
+<body>
+
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+
+
+<div class="container">
+
+        <h3 class="text-center my-5"> Alunos da Khan Academy </h3>
+        <hr>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
+
+                <th scope="col">Nome</th>
+                <th scope="col">Curso</th>
+                <th scope="col">Matricula</th>
+                <th scope="col">Status</th>
+                <th scope="col">Turno</th>
+                <th scope="col">Acão</th>
+
+            </thead>
+            <tbody>
+                <tr scope="row" th:each="alunos : ${alunosList}">
+
+                    <td th:text="${alunos.nome}"></td>
+                    <td th:text="${alunos.curso}"></td>
+                    <td th:text="${alunos.matricula}"></td>
+                    <td th:text="${alunos.status}"></td>
+                    <td th:text="${alunos.turno}"></td>
+
+                    <td class="text-center">
+
+                        <a class="btn btn-primary btn-sm me-1" th:href="@{/alterar/{id}(id=${alunos.id})}">
+                            <i class="bi bi-pencil"> </i>  Editar</a>
+                        <a class="btn btn-danger btn-sm" th:href="@{/excluir/{id}(id=${alunos.id})}">
+                            <i class="bi bi-x-circle"></i>   Excluir</a>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</body>

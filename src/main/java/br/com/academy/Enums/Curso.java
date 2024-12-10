@@ -2,11 +2,12 @@ package br.com.academy.Enums;
 
 public enum Curso {
 
-    ADMINISTRACAO("Administracao"),
-    CIENCIADACOMPUTACAO("Ciecia-da-Computacao"),
+    ADMINISTRAÇÃO("Administracao"),
+    FILOSOFIA("Filosofia"),
     MEDICINA("Medicina"),
     DIREITO("Direito"),
-    PSICOLOGIA("Administracao");
+    PSICOLOGIA("Psicologia");
+
 
     private String curso;
 
